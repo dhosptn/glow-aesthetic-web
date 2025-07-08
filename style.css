@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #fff5f5 0%, #f8f0ff 100%);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 8s ease-in-out 1s infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 20px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #home {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .text-5xl {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+.hero-bg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url('../images/bg_hero_section.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+section .about {
+  background: linear-gradient(
+    to right,
+    rgba(255, 182, 193, 0.8),
+    rgba(216, 191, 216, 0.8)
+  );
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-250 {
+  animation-delay: 0.25s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Counting animation */
+.animate-count {
+  display: inline-block;
+}
+
+/* Lihat ele */
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Smooth transition for dropdown */
+.dropdown-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown-content:not(.hidden) {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Why Choose Me */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-down {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  animation-delay: calc(var(--delay) * 100ms);
+}
+
+.animate-count {
+  animation: countUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  animation-delay: 600ms;
+}
+
+/* Custom easing for smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Hasil Perawattan Kami */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.before-after-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.before-after-slider img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-after-container:hover .before-after-slider {
+  width: 100%;
+}
+
+/* Smooth infinite scrolling animation */
+.testimonial-track {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-slides {
+  display: flex;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.testimonial-track:hover .testimonial-slides {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-slide {
+    width: 280px !important;
+  }
+}
+
+/* Card hover effect */
+.testimonial-slide > div {
+  transition: all 0.3s ease;
+}
+
+.testimonial-slide:hover > div {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth gradient edges */
+.bg-gradient-to-r,
+.bg-gradient-to-l {
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-track:hover .bg-gradient-to-r,
+.testimonial-track:hover .bg-gradient-to-l {
+  opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  .text-4xl {
+    font-size: 2rem;
+  }
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+#services .service-card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+#services .text-center h2,
+#services .text-center p {
+  opacity: 0;
+  transform: translateY(20px);
+}
+#services .absolute.inset-0 div {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.testimonial-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.before-after-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  overflow: hidden;
+  border-right: 3px solid white;
+}
+
+.before-after-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
